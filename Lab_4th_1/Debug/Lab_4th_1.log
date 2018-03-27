@@ -1,3 +1,2 @@
 ﻿  Lab_4th_1.c
-c:\users\lky94\source\repos\datastructure\lab_4th_1\lab_4th_1.c(13): warning C4477: 'printf' : 서식 문자열 '%c'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'char *'입니다.
   Lab_4th_1.vcxproj -> C:\Users\lky94\source\repos\DataStructure\Lab_4th_1\Debug\Lab_4th_1.exe

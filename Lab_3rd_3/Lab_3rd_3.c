@@ -9,7 +9,8 @@
 struct {
 	float coef; // 항의 계수
 	int expon;  // 항의 차수
-} terms[MAX_TERMS] = { { 8,3 },{ 7,1 },{ 1,0 },{ 10,3 },{ 3,2 },{ 1,0 } };
+} terms[MAX_TERMS] = { { 8,3 },{ 7,1 },{ 1,0 }, // 8x^3 + 7x^1 + 1x^0
+					 { 10,3 },{ 3,2 },{ 1,0 } };  // 10x^3 + 3x^2 + 1x^0
 int avail = 6;
 //
 char compare(int a, int b)
@@ -56,7 +57,7 @@ void poly_add2(int As, int Ae, int Bs, int Be, int *Cs, int *Ce)
 			As++; Bs++;		break;
 		case '<': 	// A의 차수 < B의 차수
 			attach(terms[Bs].coef, terms[Bs].expon);
-			Bs++;			break;
+			Bs++;			break; 
 		}
 	// A의 나머지 항들을 이동함
 	for (; As <= Ae; As++)

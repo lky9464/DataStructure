@@ -1,3 +1,3 @@
 ﻿  StudentStruct.c
-c:\users\lky94\source\repos\datastructure\studentstruct\studentstruct.c(16): warning C4013: 'strcpy'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  StudentStruct.vcxproj -> C:\Users\lky94\source\repos\DataStructure\StudentStruct\Debug\StudentStruct.exe
+c:\users\lky94\source\repos\datastructure\lab_3rd_1_1\studentstruct.c(16): warning C4013: 'strcpy'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  StudentStruct.vcxproj -> C:\Users\lky94\source\repos\DataStructure\Lab_3rd_1_1\Debug\StudentStruct.exe
