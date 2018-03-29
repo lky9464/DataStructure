@@ -27,18 +27,17 @@ void print_poly(Polynomial p, char str[])
 	printf("%s", str);
 	for (i = 0; i < p.degree; i++) {
 		if (p.coef[i] == 1){ // 계수 1일 때
-			if (i == p.degree - 1)
-				printf(" x^%d ", p.degree - i);
-			else
-				printf(" x^%d + ", p.degree - i);
+			printf(" x^%d + ", p.degree - i);
 		}
 		else if (p.coef[i] == 0) { //계수 0일 때
 			printf("");
 		}
-		else {
-			printf("%4.1f x^%d ", p.coef[i], p.degree - i); // 상수항 출력
+		
+		else { // 그 외
+			printf("%5.1f x^%d + ", p.coef[i], p.degree);
 		}
 	}
+	printf("%5.1f", p.coef[p.degree]); //상수항 출력
 	printf("\n");
 	
 }
@@ -180,13 +179,14 @@ int main()
 	print_poly(c, "A+B= ");*/
 
 	// 1...(2)
-	/*Polynomial a, b, c;  // 다항식 곱셈
+	Polynomial a, b, c;  // 다항식 곱셈
 	a = read_poly();
 	b = read_poly();
 	c = mult_poly(a, b);
 	print_poly(a, " A = ");
 	print_poly(b, " B = ");
-	print_mult_poly(a, b, c, "A*B= ");*/
+	print_mult_poly(a, b, c, "A*B= ");
+
 
 
 	// 1...(4)
