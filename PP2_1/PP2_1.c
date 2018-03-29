@@ -27,14 +27,20 @@ void print_poly(Polynomial p, char str[])
 	printf("%s", str);
 	for (i = 0; i < p.degree; i++) {
 		if (p.coef[i] == 1){ // 계수 1일 때
-			printf(" x^%d + ", p.degree - i);
+			printf(" x^%d ", p.degree - i);
+			if (i != p.degree - 1) {
+				printf("+");
+			}
 		}
 		else if (p.coef[i] == 0) { //계수 0일 때
 			printf("");
 		}
 		
 		else { // 그 외
-			printf("%5.1f x^%d + ", p.coef[i], p.degree);
+			printf("%5.1f x^%d + ", p.coef[i], p.degree - i);
+			if (i != p.degree - 1) {
+				printf("+");
+			}
 		}
 	}
 	printf("%5.1f", p.coef[p.degree]); //상수항 출력
@@ -137,6 +143,8 @@ void print_mult_poly(Polynomial a, Polynomial b, Polynomial c, char str[]) // 다
 			tempA--;
 		}
 	}
+
+	printf("\n");
 }
 
 void trimPoly(Polynomial *a) { // incomplete
